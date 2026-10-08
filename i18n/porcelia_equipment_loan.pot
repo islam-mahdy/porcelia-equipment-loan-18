@@ -1,0 +1,1073 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* porcelia_equipment_loan
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-26 21:34+0000\n"
+"PO-Revision-Date: 2026-09-26 21:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: porcelia_equipment_loan
+#: model:ir.actions.report,print_report_name:porcelia_equipment_loan.action_report_equipment_loan_detailed
+msgid "'Loan Details - %s' % (object.name)"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.actions.report,print_report_name:porcelia_equipment_loan.action_equipment_loan_report
+#: model:ir.actions.report,print_report_name:porcelia_equipment_loan.action_report_equipment_loan_receipt
+msgid "'Loan Receipt - %s' % (object.name)"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_item__condition_score
+msgid "0 (broken) to 100 (as new)."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid ""
+"<span style=\"color: #999;\">\n"
+"\n"
+"                                        No management notes available.\n"
+"\n"
+"                                    </span>"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid ""
+"<strong>\n"
+"                                        Borrower\n"
+"                                    </strong>\n"
+"\n"
+"                                    <br/>"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid ""
+"<strong>\n"
+"                                        Condition\n"
+"                                    </strong>\n"
+"\n"
+"                                    <br/>"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid ""
+"<strong>\n"
+"                                        Equipment\n"
+"                                    </strong>\n"
+"\n"
+"                                    <br/>"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid ""
+"<strong>\n"
+"                                    Borrower\n"
+"                                </strong>\n"
+"\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"\n"
+"                                __________________________\n"
+"\n"
+"                                <br/>\n"
+"\n"
+"                                <small>\n"
+"                                    Signature\n"
+"                                </small>"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid ""
+"<strong>\n"
+"                                    Borrower\n"
+"                                </strong>\n"
+"\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"\n"
+"                                __________________________\n"
+"\n"
+"                                <br/>\n"
+"\n"
+"                                <small>\n"
+"                                    Signature &amp; Date\n"
+"                                </small>"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid ""
+"<strong>\n"
+"                                    Equipment Manager\n"
+"                                </strong>\n"
+"\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"\n"
+"                                __________________________\n"
+"\n"
+"                                <br/>\n"
+"\n"
+"                                <small>\n"
+"                                    Signature\n"
+"                                </small>"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid ""
+"<strong>\n"
+"                                    Equipment Manager\n"
+"                                </strong>\n"
+"\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"\n"
+"                                __________________________\n"
+"\n"
+"                                <br/>\n"
+"\n"
+"                                <small>\n"
+"                                    Signature &amp; Date\n"
+"                                </small>"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid ""
+"<strong>\n"
+"                                    Status\n"
+"                                </strong>\n"
+"\n"
+"                                <br/>"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_form
+msgid "Accessories, purpose of the loan..."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__message_needaction
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__message_needaction
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__active
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_search
+msgid "Active"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__activity_ids
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__activity_ids
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__activity_exception_decoration
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__activity_exception_decoration
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__activity_state
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__activity_state
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__activity_type_icon
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__activity_type_icon
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_item_form
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_item_search
+msgid "Archived"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__message_attachment_count
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__message_attachment_count
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields.selection,name:porcelia_equipment_loan.selection__equipment_item__state__available
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_item_search
+msgid "Available"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_item_form
+msgid "Back in Service"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__borrower_id
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt_template
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_search
+msgid "Borrower"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt_template
+msgid "Borrower : ................."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid "Borrower Information"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_form
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_return_wizard_form
+msgid "Cancel"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields.selection,name:porcelia_equipment_loan.selection__equipment_loan__state__cancelled
+msgid "Cancelled"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.actions.act_window,name:porcelia_equipment_loan.action_equipment_category
+#: model:ir.ui.menu,name:porcelia_equipment_loan.menu_equipment_categories
+msgid "Categories"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__category_id
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_item_search
+msgid "Category"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__code
+msgid "Code"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__company_id
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__company_id
+msgid "Company"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__complete_name
+msgid "Complete Name"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__condition_score
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan_return_wizard__condition_score
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid "Condition Score"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt_template
+msgid "Condition score"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.ui.menu,name:porcelia_equipment_loan.menu_equipment_config
+msgid "Configuration"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_form
+msgid "Confirm"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_return_wizard_form
+msgid "Confirm Return"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields.selection,name:porcelia_equipment_loan.selection__equipment_loan__state__confirmed
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid "Confirmed"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__create_uid
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__create_uid
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__create_uid
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan_return_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__create_date
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__create_date
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__create_date
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan_return_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__currency_id
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid "Current Condition Score"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__daily_rate
+msgid "Daily Late Rate"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_return_wizard_form
+msgid "Damage, missing accessories..."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid "Date"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__date_due
+msgid "Date Due"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__date_return
+msgid "Date Return"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__date_start
+msgid "Date Start"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__days_late
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid "Days Late"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__days_on_loan
+msgid "Days On Loan"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt_template
+msgid "Days late"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid "Description"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__display_name
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__display_name
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__display_name
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan_return_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields.selection,name:porcelia_equipment_loan.selection__equipment_loan__state__draft
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid "Draft"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt_template
+msgid "Due"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid "Due Date"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_loan__days_on_loan
+msgid "Duration of the loan in days (actual if returned, planned otherwise)."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.module.category,name:porcelia_equipment_loan.module_category_equipment
+#: model:ir.ui.menu,name:porcelia_equipment_loan.menu_equipment_root
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid "Equipment"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model,name:porcelia_equipment_loan.model_equipment_category
+msgid "Equipment Category"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid "Equipment Condition"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid "Equipment Information"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model,name:porcelia_equipment_loan.model_equipment_item
+msgid "Equipment Item"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model,name:porcelia_equipment_loan.model_equipment_loan
+msgid "Equipment Loan"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid "Equipment Loan Details"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid ""
+"Equipment Loan Management System\n"
+"\n"
+"                            <br/>\n"
+"\n"
+"                            Generated from Odoo"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid "Equipment Loan Receipt"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model,name:porcelia_equipment_loan.model_equipment_loan_return_wizard
+msgid "Equipment Loan Return Wizard"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.actions.server,name:porcelia_equipment_loan.ir_cron_equipment_loan_overdue_ir_actions_server
+msgid "Equipment Loan: flag overdue loans"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_res_users__equipment_loan_ids
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_users_form_equipment_loans
+msgid "Equipment Loans"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#. odoo-python
+#: code:addons/porcelia_equipment_loan/wizard/equipment_loan_return_wizard.py:0
+msgid "Equipment returned. Condition Score: %(score)s"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid "Equipment was issued to borrower."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid "Equipment was returned."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid "Event"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid "Expected equipment return date."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid "Financial Information"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__message_follower_ids
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__message_follower_ids
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__message_partner_ids
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__message_partner_ids
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_category__activity_type_icon
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_item__activity_type_icon
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_loan__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_item_search
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_search
+msgid "Group By"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__has_message
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__has_message
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__id
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__id
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__id
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan_return_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:equipment.category,name:porcelia_equipment_loan.demo_category_it
+msgid "IT Equipment"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__activity_exception_icon
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__activity_exception_icon
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_category__activity_exception_icon
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_item__activity_exception_icon
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_loan__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_category__message_needaction
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_item__message_needaction
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_loan__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_category__message_has_error
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_item__message_has_error
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_loan__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__image_1920
+msgid "Image"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__image_1024
+msgid "Image 1024"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__image_128
+msgid "Image 128"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__image_256
+msgid "Image 256"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__image_512
+msgid "Image 512"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__message_is_follower
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__message_is_follower
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__is_overdue
+msgid "Is Overdue"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__item_id
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt_template
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_search
+msgid "Item"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.actions.act_window,name:porcelia_equipment_loan.action_equipment_item
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__item_count
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__item_ids
+#: model:ir.ui.menu,name:porcelia_equipment_loan.menu_equipment_items
+msgid "Items"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:equipment.category,name:porcelia_equipment_loan.demo_category_laptops
+msgid "Laptops"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__write_uid
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__write_uid
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__write_uid
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan_return_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__write_date
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__write_date
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__write_date
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan_return_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__loan_count
+msgid "Loan Count"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.actions.report,name:porcelia_equipment_loan.action_report_equipment_loan_detailed
+msgid "Loan Detailed Report"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid "Loan Information"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.actions.report,name:porcelia_equipment_loan.action_report_equipment_loan_receipt
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt_template
+msgid "Loan Receipt"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.actions.report,name:porcelia_equipment_loan.action_equipment_loan_report
+msgid "Loan Receipt Report"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid "Loan Reference:"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid "Loan Started"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid "Loan Timeline"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.actions.act_window,name:porcelia_equipment_loan.action_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__loan_ids
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan_return_wizard__loan_ids
+#: model:ir.ui.menu,name:porcelia_equipment_loan.menu_equipment_loans
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_item_form
+msgid "Loans"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields.selection,name:porcelia_equipment_loan.selection__equipment_item__state__maintenance
+#: model:ir.model.fields.selection,name:porcelia_equipment_loan.selection__equipment_item__unavailable_state__maintenance
+msgid "Maintenance"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid "Management Notes"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:res.groups,name:porcelia_equipment_loan.group_equipment_manager
+msgid "Manager"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt_template
+msgid "Manager signature: ................."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_item__unavailable_state
+msgid "Manual override: the item cannot be loaned while set."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:equipment.category,name:porcelia_equipment_loan.demo_category_measure
+msgid "Measuring Devices"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__message_has_error
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__message_has_error
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__message_ids
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__message_ids
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__my_activity_date_deadline
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__my_activity_date_deadline
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_search
+msgid "My Loans"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__name
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__name
+msgid "Name"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__activity_date_deadline
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__activity_date_deadline
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__activity_summary
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__activity_summary
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__activity_type_id
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__activity_type_id
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan_return_wizard__note
+msgid "Note"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__notes
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_form
+msgid "Notes"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__message_needaction_counter
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__message_needaction_counter
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__message_has_error_counter
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__message_has_error_counter
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_category__item_count
+msgid "Number of items in this category, including its sub-categories."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_category__message_needaction_counter
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_item__message_needaction_counter
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_loan__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_category__message_has_error_counter
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_item__message_has_error_counter
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_loan__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields.selection,name:porcelia_equipment_loan.selection__equipment_item__state__on_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_item_search
+msgid "On Loan"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#. odoo-python
+#: code:addons/porcelia_equipment_loan/models/equipment_loan.py:0
+msgid "Only Equipment Managers can perform this action."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__unavailable_state
+msgid "Out of Service"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_form
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_search
+msgid "Overdue"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__parent_id
+msgid "Parent Category"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__parent_path
+msgid "Parent Path"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt_template
+msgid "Penalty"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__penalty_amount
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid "Penalty Amount"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_item__daily_rate
+msgid "Penalty charged per day of delay when the item is returned late."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#. odoo-python
+#: code:addons/porcelia_equipment_loan/wizard/equipment_loan_return_wizard.py:0
+msgid "Please select at least one confirmed loan."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__name
+msgid "Reference"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+msgid "Reference:"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__activity_user_id
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__activity_user_id
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_form
+msgid "Return"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan_return_wizard__date_return
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid "Return Date"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.actions.act_window,name:porcelia_equipment_loan.action_equipment_loan_return_wizard
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_return_wizard_form
+msgid "Return Equipment"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields.selection,name:porcelia_equipment_loan.selection__equipment_loan__state__returned
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_detailed
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt_template
+msgid "Returned"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_item_form
+msgid "Scrap"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields.selection,name:porcelia_equipment_loan.selection__equipment_item__state__scrapped
+#: model:ir.model.fields.selection,name:porcelia_equipment_loan.selection__equipment_item__unavailable_state__scrapped
+msgid "Scrapped"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_item_form
+msgid "Send to Maintenance"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_form
+msgid "Set to Draft"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:equipment.category,name:porcelia_equipment_loan.demo_category_showroom
+msgid "Showroom"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt_template
+msgid "Start"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid "Start Date"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__state
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_loan__state
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_search
+msgid "State"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_item_search
+msgid "Status"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_category__activity_state
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_item__activity_state
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_loan__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_category__child_ids
+msgid "Sub-Category"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.constraint,message:porcelia_equipment_loan.constraint_equipment_item_condition_score_range
+msgid "The condition score must be between 0 and 100."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.constraint,message:porcelia_equipment_loan.constraint_equipment_item_code_company_unique
+msgid "The item code must be unique per company."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.report_loan_receipt
+msgid ""
+"This document confirms the equipment\n"
+"                            loan transaction."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_loan_list
+msgid "Total"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,field_description:porcelia_equipment_loan.field_equipment_item__total_days_on_loan
+msgid "Total Days On Loan"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_category__activity_exception_decoration
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_item__activity_exception_decoration
+#: model:ir.model.fields,help:porcelia_equipment_loan.field_equipment_loan__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model:ir.model,name:porcelia_equipment_loan.model_res_users
+#: model:res.groups,name:porcelia_equipment_loan.group_equipment_user
+msgid "User"
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#. odoo-python
+#: code:addons/porcelia_equipment_loan/models/equipment_category.py:0
+msgid "You cannot create recursive categories."
+msgstr ""
+
+#. module: porcelia_equipment_loan
+#: model_terms:ir.ui.view,arch_db:porcelia_equipment_loan.view_equipment_item_form
+msgid "e.g. Laptop Pro 14"
+msgstr ""

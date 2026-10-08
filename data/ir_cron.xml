@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="ir_cron_equipment_loan_overdue" model="ir.cron">
+        <field name="name">Equipment Loan: flag overdue loans</field>
+        <field name="model_id" ref="model_equipment_loan"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_check_overdue()</field>
+        <field name="user_id" ref="base.user_root"/> <!-- study odoo default groups -->
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="active" eval="True"/>
+    </record>
+
+
+</odoo>

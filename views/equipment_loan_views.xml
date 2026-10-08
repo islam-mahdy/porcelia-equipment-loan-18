@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_equipment_loan_list" model="ir.ui.view">
+        <field name="name">equipment.loan.list</field>
+        <field name="model">equipment.loan</field>
+        <field name="arch" type="xml">
+            <list decoration-danger="is_overdue" decoration-muted="state == 'cancelled'">
+                <field name="name"/>
+                <field name="item_id"/>
+                <field name="borrower_id"/>
+                <field name="date_start"/>
+                <field name="date_due"/>
+                <field name="date_return" optional="show"/>
+                <field name="days_late" optional="show"/>
+                <field name="penalty_amount" optional="show" sum="Total"/>
+                <field name="state" widget="badge"
+                       decoration-info="state == 'draft'"
+                       decoration-success="state == 'returned'"
+                       decoration-warning="state == 'confirmed'"/>
+                <field name="is_overdue" column_invisible="1"/>
+                <field name="currency_id" column_invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_equipment_loan_form" model="ir.ui.view">
+        <field name="name">equipment.loan.form</field>
+        <field name="model">equipment.loan</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_confirm" type="object" string="Confirm" class="btn-primary"
+                            invisible="state != 'draft'"
+                            groups="porcelia_equipment_loan.group_equipment_manager"/>
+
+                    <button name="%(porcelia_equipment_loan.action_equipment_loan_return_wizard)d"
+                            type="action" string="Return" class="btn-primary"
+                            invisible="state != 'confirmed'"
+                            groups="porcelia_equipment_loan.group_equipment_manager"/>
+
+                    <button name="action_cancel" type="object" string="Cancel"
+                            invisible="state not in ('draft', 'confirmed')"/>
+
+                    <button name="action_draft" type="object" string="Set to Draft"
+                            invisible="state != 'cancelled'"
+                            groups="porcelia_equipment_loan.group_equipment_manager"/>
+
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,returned"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Overdue" bg_color="bg-danger" invisible="not is_overdue"/>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="item_id" readonly="state != 'draft'"/>
+                            <field name="borrower_id" readonly="state != 'draft'"/>
+                            <field name="is_overdue" invisible="1"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="date_start" readonly="state != 'draft'"/>
+                            <field name="date_due" readonly="state != 'draft'"/>
+                            <field name="date_return" readonly="1"/>
+                            <field name="days_late"/>
+                            <field name="penalty_amount"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Notes" name="notes">
+                            <field name="notes" placeholder="Accessories, purpose of the loan..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+
+                <chatter />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_equipment_loan_search" model="ir.ui.view">
+        <field name="name">equipment.loan.search</field>
+        <field name="model">equipment.loan</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="item_id"/>
+                <field name="borrower_id"/>
+
+                <filter name="my_loans" string="My Loans" domain="[('borrower_id', '=', uid)]"/>
+                <filter name="overdue" string="Overdue" domain="[('is_overdue', '=', True)]"/>
+                <filter name="active_loans" string="Active"
+                        domain="[('state', '=', 'confirmed'), ('date_return', '=', False)]"/>
+
+
+                <filter name="group_state" string="State" context="{'group_by': 'state'}"/>
+                <filter name="group_item" string="Item" context="{'group_by': 'item_id'}"/>
+                <filter name="group_borrower" string="Borrower" context="{'group_by': 'borrower_id'}"/>
+
+            </search>
+        </field>
+    </record>
+
+    <record id="action_equipment_loan" model="ir.actions.act_window">
+        <field name="name">Loans</field>
+        <field name="res_model">equipment.loan</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

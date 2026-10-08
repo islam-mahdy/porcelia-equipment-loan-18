@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="base.user_demo" model="res.users">
+        <field name="groups_id" eval="[(4, ref('porcelia_equipment_loan.group_equipment_user'))]"/>
+    </record>
+
+    <!-- Categories -->
+    <record id="demo_category_it" model="equipment.category">
+        <field name="name">IT Equipment</field>
+    </record>
+    <record id="demo_category_laptops" model="equipment.category">
+        <field name="name">Laptops</field>
+        <field name="parent_id" ref="demo_category_it"/>
+    </record>
+    <record id="demo_category_measure" model="equipment.category">
+        <field name="name">Measuring Devices</field>
+    </record>
+    <record id="demo_category_showroom" model="equipment.category">
+        <field name="name">Showroom</field>
+    </record>
+
+    <!-- Items -->
+    <record id="demo_item_laptop" model="equipment.item">
+        <field name="name">Laptop Pro 14</field>
+        <field name="category_id" ref="demo_category_laptops"/>
+        <field name="daily_rate">15</field>
+        <field name="condition_score">90</field>
+    </record>
+    <record id="demo_item_laser" model="equipment.item">
+        <field name="name">Laser Tile Measurer</field>
+        <field name="category_id" ref="demo_category_measure"/>
+        <field name="daily_rate">10</field>
+        <field name="condition_score">70</field>
+    </record>
+    <record id="demo_item_case" model="equipment.item">
+        <field name="name">Tile Sample Case A</field>
+        <field name="category_id" ref="demo_category_showroom"/>
+        <field name="daily_rate">5</field>
+        <field name="condition_score">35</field>
+    </record>
+    <record id="demo_item_stand" model="equipment.item">
+        <field name="name">Display Stand XL</field>
+        <field name="category_id" ref="demo_category_showroom"/>
+        <field name="daily_rate">8</field>
+        <field name="condition_score">60</field>
+    </record>
+    <record id="demo_item_tablet" model="equipment.item">
+        <field name="name">Field Tablet</field>
+        <field name="category_id" ref="demo_category_it"/>
+        <field name="daily_rate">6</field>
+        <field name="condition_score">100</field>
+    </record>
+
+    <!-- Loans: one per state -->
+    <record id="demo_loan_draft" model="equipment.loan">
+        <field name="item_id" ref="demo_item_stand"/>
+        <field name="borrower_id" ref="base.user_demo"/>
+        <field name="date_start" eval="(DateTime.now() + timedelta(days=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_due" eval="(DateTime.now() + timedelta(days=5)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="state">draft</field>
+    </record>
+    <record id="demo_loan_confirmed_overdue" model="equipment.loan">
+        <field name="item_id" ref="demo_item_laser"/>
+        <field name="borrower_id" ref="base.user_demo"/>
+        <field name="date_start" eval="(DateTime.now() - timedelta(days=12)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_due" eval="(DateTime.now() - timedelta(days=4)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="state">confirmed</field>
+        <field name="is_overdue" eval="True"/>
+    </record>
+    <record id="demo_loan_returned_late" model="equipment.loan">
+        <field name="item_id" ref="demo_item_case"/>
+        <field name="borrower_id" ref="base.user_admin"/>
+        <field name="date_start" eval="(DateTime.now() - timedelta(days=9)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_due" eval="(DateTime.now() - timedelta(days=6)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_return" eval="(DateTime.now() - timedelta(days=3)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="state">returned</field>
+    </record>
+    <record id="demo_loan_cancelled" model="equipment.loan">
+        <field name="item_id" ref="demo_item_tablet"/>
+        <field name="borrower_id" ref="base.user_admin"/>
+        <field name="date_start" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_due" eval="(DateTime.now() + timedelta(days=3)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="state">cancelled</field>
+    </record>
+</odoo>

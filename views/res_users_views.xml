@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="view_users_form_equipment_loans" model="ir.ui.view">
+        <field name="name">res.users.form.equipment.loans</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Equipment Loans" name="equipment_loans"
+                      groups="porcelia_equipment_loan.group_equipment_user">
+                    <field name="equipment_loan_ids" readonly="1">
+                        <list decoration-danger="is_overdue">
+                            <field name="name"/>
+                            <field name="item_id"/>
+                            <field name="date_due"/>
+                            <field name="state"/>
+                            <field name="is_overdue" column_invisible="1"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

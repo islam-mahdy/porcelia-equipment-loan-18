@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ========================================================= -->
+    <!-- REPORT 1: LOAN RECEIPT                                   -->
+    <!-- ========================================================= -->
+
+    <record id="action_report_equipment_loan_receipt"
+            model="ir.actions.report">
+
+        <field name="name">Loan Receipt</field>
+        <field name="model">equipment.loan</field>
+        <field name="report_type">qweb-pdf</field>
+
+        <field name="report_name">porcelia_equipment_loan.report_loan_receipt</field>
+        <field name="report_file">porcelia_equipment_loan.report_loan_receipt</field>
+
+        <field name="print_report_name">'Loan Receipt - %s' % (object.name)</field>
+
+        <field name="binding_model_id" ref="model_equipment_loan"/>
+        <field name="binding_type">report</field>
+
+    </record>
+
+
+    <!-- ========================================================= -->
+    <!-- REPORT 1 TEMPLATE: LOAN RECEIPT                          -->
+    <!-- ========================================================= -->
+
+    <template id="report_loan_receipt">
+
+        <t t-call="web.html_container">
+
+            <t t-foreach="docs" t-as="o">
+
+                <t t-call="web.external_layout">
+
+                    <div class="page">
+
+                        <!-- HEADER -->
+                        <div class="text-center mb-4">
+
+                            <h2>
+                                Equipment Loan Receipt
+                            </h2>
+
+                            <p style="font-size: 14px; color: #666;">
+
+                                Loan Reference:
+
+                                <strong>
+                                    <span t-field="o.name"/>
+                                </strong>
+
+                            </p>
+
+                        </div>
+
+
+                        <!-- STATUS -->
+                        <div class="text-center mb-4">
+
+                            <span t-if="o.state == 'draft'"
+                                  class="badge bg-secondary"
+                                  style="padding: 7px 15px;">
+                                Draft
+                            </span>
+
+                            <span t-if="o.state == 'confirmed'"
+                                  class="badge bg-primary"
+                                  style="padding: 7px 15px;">
+                                Confirmed
+                            </span>
+
+                            <span t-if="o.state == 'returned'"
+                                  class="badge bg-success"
+                                  style="padding: 7px 15px;">
+                                Returned
+                            </span>
+
+                            <span t-if="o.state == 'overdue'"
+                                  class="badge bg-danger"
+                                  style="padding: 7px 15px;">
+                                Overdue
+                            </span>
+
+                        </div>
+
+
+                        <!-- EQUIPMENT -->
+                        <h4 style="
+                            border-bottom: 2px solid #333;
+                            padding-bottom: 8px;
+                        ">
+                            Equipment Information
+                        </h4>
+
+
+                        <table class="table table-sm mt-3">
+
+                            <tbody>
+
+                                <tr>
+
+                                    <th width="35%">
+                                        Equipment
+                                    </th>
+
+                                    <td>
+                                        <span t-field="o.item_id"/>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <th>
+                                        Condition Score
+                                    </th>
+
+                                    <td>
+
+                                        <span t-field="o.item_id.condition_score"/>
+
+                                        / 100
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+
+                        <!-- BORROWER -->
+                        <h4 style="
+                            border-bottom: 2px solid #333;
+                            padding-bottom: 8px;
+                            margin-top: 30px;
+                        ">
+                            Borrower Information
+                        </h4>
+
+
+                        <table class="table table-sm mt-3">
+
+                            <tbody>
+
+                                <tr>
+
+                                    <th width="35%">
+                                        Borrower
+                                    </th>
+
+                                    <td>
+                                        <span t-field="o.borrower_id"/>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+
+                        <!-- LOAN DETAILS -->
+                        <h4 style="
+                            border-bottom: 2px solid #333;
+                            padding-bottom: 8px;
+                            margin-top: 30px;
+                        ">
+                            Loan Information
+                        </h4>
+
+
+                        <table class="table table-sm mt-3">
+
+                            <tbody>
+
+                                <tr>
+
+                                    <th width="35%">
+                                        Start Date
+                                    </th>
+
+                                    <td>
+                                        <span t-field="o.date_start"/>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <th>
+                                        Due Date
+                                    </th>
+
+                                    <td>
+                                        <span t-field="o.date_due"/>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr t-if="o.date_return">
+
+                                    <th>
+                                        Return Date
+                                    </th>
+
+                                    <td>
+                                        <span t-field="o.date_return"/>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <th>
+                                        Days Late
+                                    </th>
+
+                                    <td>
+                                        <span t-field="o.days_late"/>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <th>
+                                        Penalty
+                                    </th>
+
+                                    <td>
+                                        <span t-field="o.penalty_amount"/>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+
+                        <!-- SIGNATURES -->
+                        <div class="row"
+                             style="margin-top: 80px;">
+
+                            <div class="col-6 text-center">
+
+                                <strong>
+                                    Borrower
+                                </strong>
+
+                                <br/>
+                                <br/>
+                                <br/>
+
+                                __________________________
+
+                                <br/>
+
+                                <small>
+                                    Signature
+                                </small>
+
+                            </div>
+
+
+                            <div class="col-6 text-center">
+
+                                <strong>
+                                    Equipment Manager
+                                </strong>
+
+                                <br/>
+                                <br/>
+                                <br/>
+
+                                __________________________
+
+                                <br/>
+
+                                <small>
+                                    Signature
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- FOOTER NOTE -->
+                        <div class="text-center"
+                             style="
+                                margin-top: 50px;
+                                color: #777;
+                                font-size: 11px;
+                             ">
+
+                            This document confirms the equipment
+                            loan transaction.
+
+                        </div>
+
+                    </div>
+
+                </t>
+
+            </t>
+
+        </t>
+
+    </template>
+
+
+
+    <!-- ========================================================= -->
+    <!-- REPORT 2: DETAILED LOAN REPORT                           -->
+    <!-- ========================================================= -->
+
+    <record id="action_report_equipment_loan_detailed"
+            model="ir.actions.report">
+
+        <field name="name">Loan Detailed Report</field>
+        <field name="model">equipment.loan</field>
+        <field name="report_type">qweb-pdf</field>
+
+        <field name="report_name">porcelia_equipment_loan.report_loan_detailed</field>
+        <field name="report_file">porcelia_equipment_loan.report_loan_detailed</field>
+
+        <field name="print_report_name">'Loan Details - %s' % (object.name)</field>
+
+        <field name="binding_model_id" ref="model_equipment_loan"/>
+        <field name="binding_type">report</field>
+
+    </record>
+
+
+    <!-- ========================================================= -->
+    <!-- REPORT 2 TEMPLATE: DETAILED LOAN REPORT                 -->
+    <!-- ========================================================= -->
+
+    <template id="report_loan_detailed">
+
+        <t t-call="web.html_container">
+
+            <t t-foreach="docs" t-as="o">
+
+                <t t-call="web.external_layout">
+
+                    <div class="page">
+
+                        <!-- ================================================= -->
+                        <!-- HEADER                                           -->
+                        <!-- ================================================= -->
+
+                        <div class="row">
+
+                            <div class="col-8">
+
+                                <h2>
+                                    Equipment Loan Details
+                                </h2>
+
+                                <p style="color: #666;">
+
+                                    Reference:
+
+                                    <strong>
+                                        <span t-field="o.name"/>
+                                    </strong>
+
+                                </p>
+
+                            </div>
+
+
+                            <div class="col-4 text-end">
+
+                                <strong>
+                                    Status
+                                </strong>
+
+                                <br/>
+
+
+                                <span t-if="o.state == 'draft'"
+                                      class="badge bg-secondary"
+                                      style="padding: 6px 12px;">
+                                    Draft
+                                </span>
+
+
+                                <span t-if="o.state == 'confirmed'"
+                                      class="badge bg-primary"
+                                      style="padding: 6px 12px;">
+                                    Confirmed
+                                </span>
+
+
+                                <span t-if="o.state == 'returned'"
+                                      class="badge bg-success"
+                                      style="padding: 6px 12px;">
+                                    Returned
+                                </span>
+
+
+                                <span t-if="o.state == 'overdue'"
+                                      class="badge bg-danger"
+                                      style="padding: 6px 12px;">
+                                    Overdue
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <hr/>
+
+
+                        <!-- ================================================= -->
+                        <!-- SUMMARY                                          -->
+                        <!-- ================================================= -->
+
+                        <div class="row mt-4">
+
+
+                            <div class="col-4">
+
+                                <div style="
+                                    border: 1px solid #ddd;
+                                    padding: 15px;
+                                    text-align: center;
+                                ">
+
+                                    <strong>
+                                        Equipment
+                                    </strong>
+
+                                    <br/>
+
+                                    <span t-field="o.item_id"/>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-4">
+
+                                <div style="
+                                    border: 1px solid #ddd;
+                                    padding: 15px;
+                                    text-align: center;
+                                ">
+
+                                    <strong>
+                                        Borrower
+                                    </strong>
+
+                                    <br/>
+
+                                    <span t-field="o.borrower_id"/>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-4">
+
+                                <div style="
+                                    border: 1px solid #ddd;
+                                    padding: 15px;
+                                    text-align: center;
+                                ">
+
+                                    <strong>
+                                        Condition
+                                    </strong>
+
+                                    <br/>
+
+                                    <span t-field="o.item_id.condition_score"/>
+
+                                    / 100
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ================================================= -->
+                        <!-- LOAN TIMELINE                                    -->
+                        <!-- ================================================= -->
+
+                        <h4 class="mt-5"
+                            style="
+                                border-bottom: 2px solid #333;
+                                padding-bottom: 8px;
+                            ">
+
+                            Loan Timeline
+
+                        </h4>
+
+
+                        <table class="table table-bordered table-sm mt-3">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Event
+                                    </th>
+
+                                    <th>
+                                        Date
+                                    </th>
+
+                                    <th>
+                                        Description
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        Loan Started
+                                    </td>
+
+                                    <td>
+                                        <span t-field="o.date_start"/>
+                                    </td>
+
+                                    <td>
+                                        Equipment was issued to borrower.
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Due Date
+                                    </td>
+
+                                    <td>
+                                        <span t-field="o.date_due"/>
+                                    </td>
+
+                                    <td>
+                                        Expected equipment return date.
+                                    </td>
+
+                                </tr>
+
+
+                                <tr t-if="o.date_return">
+
+                                    <td>
+                                        Returned
+                                    </td>
+
+                                    <td>
+                                        <span t-field="o.date_return"/>
+                                    </td>
+
+                                    <td>
+                                        Equipment was returned.
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+
+
+                        <!-- ================================================= -->
+                        <!-- FINANCIAL INFORMATION                            -->
+                        <!-- ================================================= -->
+
+                        <h4 class="mt-5"
+                            style="
+                                border-bottom: 2px solid #333;
+                                padding-bottom: 8px;
+                            ">
+
+                            Financial Information
+
+                        </h4>
+
+
+                        <table class="table table-bordered table-sm mt-3">
+
+                            <tbody>
+
+                                <tr>
+
+                                    <th width="50%">
+                                        Days Late
+                                    </th>
+
+                                    <td>
+                                        <span t-field="o.days_late"/>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <th>
+                                        Penalty Amount
+                                    </th>
+
+                                    <td>
+                                        <span t-field="o.penalty_amount"/>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+
+
+                        <!-- ================================================= -->
+                        <!-- CONDITION INFORMATION                            -->
+                        <!-- ================================================= -->
+
+                        <h4 class="mt-5"
+                            style="
+                                border-bottom: 2px solid #333;
+                                padding-bottom: 8px;
+                            ">
+
+                            Equipment Condition
+
+                        </h4>
+
+
+                        <table class="table table-bordered table-sm mt-3">
+
+                            <tbody>
+
+                                <tr>
+
+                                    <th width="50%">
+                                        Current Condition Score
+                                    </th>
+
+                                    <td>
+
+                                        <strong>
+
+                                            <span t-field="o.item_id.condition_score"/>
+
+                                            / 100
+
+                                        </strong>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+
+
+                        <!-- ================================================= -->
+                        <!-- MANAGEMENT NOTES                                 -->
+                        <!-- ================================================= -->
+
+                        <div class="mt-5">
+
+                            <h4 style="
+                                border-bottom: 2px solid #333;
+                                padding-bottom: 8px;
+                            ">
+
+                                Management Notes
+
+                            </h4>
+
+
+                            <div style="
+                                min-height: 100px;
+                                border: 1px solid #ddd;
+                                margin-top: 15px;
+                                padding: 15px;
+                            ">
+
+                                <t t-if="o.notes">
+
+                                    <span t-field="o.notes"/>
+
+                                </t>
+
+
+                                <t t-else="">
+
+                                    <span style="color: #999;">
+
+                                        No management notes available.
+
+                                    </span>
+
+                                </t>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ================================================= -->
+                        <!-- SIGNATURES                                       -->
+                        <!-- ================================================= -->
+
+                        <div class="row"
+                             style="margin-top: 80px;">
+
+                            <div class="col-6 text-center">
+
+                                <strong>
+                                    Borrower
+                                </strong>
+
+                                <br/>
+                                <br/>
+                                <br/>
+
+                                __________________________
+
+                                <br/>
+
+                                <small>
+                                    Signature &amp; Date
+                                </small>
+
+                            </div>
+
+
+                            <div class="col-6 text-center">
+
+                                <strong>
+                                    Equipment Manager
+                                </strong>
+
+                                <br/>
+                                <br/>
+                                <br/>
+
+                                __________________________
+
+                                <br/>
+
+                                <small>
+                                    Signature &amp; Date
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ================================================= -->
+                        <!-- FOOTER                                           -->
+                        <!-- ================================================= -->
+
+                        <div class="text-center"
+                             style="
+                                margin-top: 40px;
+                                font-size: 10px;
+                                color: #777;
+                             ">
+
+                            Equipment Loan Management System
+
+                            <br/>
+
+                            Generated from Odoo
+
+                        </div>
+
+                    </div>
+
+                </t>
+
+            </t>
+
+        </t>
+
+    </template>
+
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_equipment_loan_return_wizard_form" model="ir.ui.view">
+        <field name="name">equipment.loan.return.wizard.form</field>
+        <field name="model">equipment.loan.return.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Return Equipment">
+                <group>
+                    <field name="loan_ids" widget="many2many_tags" readonly="1"/>
+                    <field name="date_return"/>
+                    <field name="condition_score" widget="condition_gauge"/>
+                    <field name="note" placeholder="Damage, missing accessories..."/>
+                </group>
+                <footer>
+                    <button string="Confirm Return" name="action_confirm" type="object" class="btn-primary" data-hotkey="q"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="x"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_equipment_loan_return_wizard" model="ir.actions.act_window">
+        <field name="name">Return Equipment</field>
+        <field name="res_model">equipment.loan.return.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_equipment_loan"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="groups_id" eval="[(4, ref('porcelia_equipment_loan.group_equipment_manager'))]"/>
+    </record>
+</odoo>

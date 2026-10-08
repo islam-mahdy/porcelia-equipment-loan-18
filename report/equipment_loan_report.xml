@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_equipment_loan_report" model="ir.actions.report">
+        <field name="name">Loan Receipt Report</field>
+        <field name="model">equipment.loan</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">porcelia_equipment_loan.report_loan_receipt_template</field>
+        <field name="report_file">porcelia_equipment_loan.report_loan_receipt_template</field>
+        <field name="print_report_name">'Loan Receipt - %s' % (object.name)</field>
+        <field name="binding_model_id" ref="model_equipment_loan"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_loan_receipt_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Loan Receipt <span t-field="o.name"/></h2>
+                        <table class="table table-sm mt-4">
+                            <tbody>
+
+                                <tr>
+                                    <th>Item</th><td><span t-field="o.item_id.display_name"/></td>
+                                </tr>
+
+                                <tr>
+                                    <th>Borrower</th><td><span t-field="o.borrower_id"/></td>
+                                </tr>
+
+                                <tr>
+                                    <th>Start</th><td><span t-field="o.date_start"/></td>
+                                </tr>
+
+                                <tr>
+                                    <th>Due</th><td><span t-field="o.date_due"/></td>
+                                </tr>
+
+                                <tr>
+                                    <th>Returned</th><td><span t-field="o.date_return"/></td>
+                                </tr>
+
+                                <tr>
+                                    <th>Condition score</th><td><span t-field="o.item_id.condition_score"/> / 100</td>
+                                </tr>
+
+                                <tr>
+                                    <th>Days late</th><td><span t-field="o.days_late"/></td>
+                                </tr>
+
+                                <tr>
+                                    <th>Penalty</th><td><span t-field="o.penalty_amount"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row mt-5">
+                            <div class="col-6">Borrower : ................. </div>
+                            <div class="col-6">Manager signature: ................. </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
