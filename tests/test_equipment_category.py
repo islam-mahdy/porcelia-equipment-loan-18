@@ -97,6 +97,7 @@ class TestEquipmentCategory(TransactionCase):
             3,
         )
 
+    # Testing smart button
     def test_action_view_items(self):
         action = self.root_category.action_view_items()
 
